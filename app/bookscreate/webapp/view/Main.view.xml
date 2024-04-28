@@ -1,0 +1,17 @@
+<mvc:View controllerName="bookshop.bookscreate.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page showHeader="false">
+        <content>
+            <List id="booksList" items="{ path:'/Books' }">
+                <StandardListItem title="{title}" description="{descr}" info="{author/name}"></StandardListItem>
+            </List>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button icon="sap-icon://create" type="Emphasized" text="Deep Create" press="onDeepCreateBook"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

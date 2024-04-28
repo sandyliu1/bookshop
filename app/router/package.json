@@ -1,0 +1,13 @@
+{
+  "name": "bookshop-approuter",
+  "dependencies": {
+    "@sap/approuter": "^16"
+  },
+  "devDependencies": {
+    "@sap/html5-repo-mock": "^2"
+  },
+  "scripts": {
+    "start-local": "node node_modules/@sap/html5-repo-mock/index.js",
+    "start": "node node_modules/@sap/approuter/approuter.js"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "welcomeFile": "app/index.html",
+  "routes": [
+    {
+      "source": "^/appconfig/fioriSandboxConfig.json",
+      "target": "/appconfig/fioriSandboxConfig.json",
+      "localDir": "../portal/"
+    },
+    {
+      "source": "^/odata/v4/catalog/(.*)$",
+      "target": "/odata/v4/catalog/$1",
+      "destination": "srv-api",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/odata/v4/admin/(.*)$",
+      "target": "/odata/v4/admin/$1",
+      "destination": "srv-api",
+      "authenticationType": "xsuaa",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/app/browse/webapp/(.*)$",
+      "target": "/webapp/$1",
+      "localDir": "../browse/"
+    },
+    {
+      "source": "^/app/bookscreate/webapp/(.*)$",
+      "target": "/webapp/$1",
+      "localDir": "../bookscreate/"
+    },
+    {
+      "source": "^/app/admin-books/webapp/(.*)$",
+      "target": "/webapp/$1",
+      "localDir": "../admin-books/"
+    },
+    {
+      "source": "^/app/(.*)$",
+      "target": "/$1",
+      "localDir": "../portal/"
+    }
+  ]
+}
